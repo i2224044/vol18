@@ -1,0 +1,284 @@
+/* 全体のスタイル */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* サイト全体の最大幅を設定 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ヘッダーエリア */
+    header {
+      padding: 20px;
+    }
+
+    .logo {
+      /* ロゴのスタイル */
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+    }
+
+    .breadcrumbs {
+      /* パンくずリストのスタイル */
+      font-style: Arial;
+    }
+
+    /* ビジュアルエリア */
+    .visual-area {
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* コンテンツエリア */
+    .content-area {
+      display: flex;
+      justify-content: center; /* コンテンツをセンター寄せにする */
+    }
+
+    main {
+      /* メインコンテンツのスタイル */
+      flex: 2;
+      padding: 20px;
+    }
+
+    aside {
+      /* サイドバーのスタイル */
+      flex: 1;
+      background-color: #f8f8f8;
+      padding: 20px;
+    }
+
+    /* フッターエリア */
+    footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    p{
+      font-size: 1.2em;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    font{
+      font-family: 'Helvetica', sans-serif;
+    }
+
+    .honbun p{
+      font-size: 1em;
+      font-weight: 200;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    b{
+      text-decoration: none;
+    }
+
+
+/* レスポンシブなスタイル */
+/* PC向けのスタイル */
+    @media only screen and (min-width: 768px) {
+        body {
+          font-family: Baskerville, sans-serif;
+          background-color: #131313;
+          padding: 20px;
+        }
+
+        header {
+          background-color: rgb(38, 44, 65);
+          padding: 20px;
+          color: rgb(255, 255, 255);
+          text-align: center;
+        }
+
+        header nav {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          padding: 0;
+          font-size: 28px;
+        }
+
+        .logo{
+          font-size: 40px;
+        }
+
+        header nav li {
+          margin: 0 10px;
+        }
+
+        .breadcrumbs{
+          font-size: 25px;
+        }
+        
+        .foto{
+          width: 330px; height: 210px; 
+          text-align: center;
+        }
+  
+        main {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+
+        .portfolio-item {
+          padding: 20px;
+          border-radius: 5px;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.2em;
+        }
+
+        a{
+          color: rgb(229, 169, 169);
+        }
+
+        .content-area { 
+          color: #772e2e;
+          background-color: #131313;
+        }
+        
+        .visual-area {
+          background-color: rgb(22, 22, 22);
+          color: #f1f1f1;
+        }
+
+        footer {
+          background-color: rgb(19, 19, 19);
+          padding: 20px;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          font-size: 12px;
+        }
+
+       .custom-link{
+         color: #000000;
+         background-color: rgb(224, 224, 249);
+         border-radius: 30px;
+        }
+
+        .custom-link:hover {
+         color: rgb(255, 255, 255);
+         background-color: rgb(48, 48, 48);
+        }
+      }
+
+
+/* スマートフォン向けのスタイル */
+    @media only screen and (max-width: 767px) {
+        body {
+          font-family: Baskerville, sans-serif;
+          background-color: #131313;
+          padding: 10px;
+        }
+
+        header {
+          background-color: rgb(38, 44, 65);
+          padding: 10px;
+          color: rgb(255, 255, 255);
+          text-align: center;
+        }
+
+        .logo{
+          font-size: 36px;
+        }
+
+        header nav {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          padding: 0;
+          font-size: 25px;
+        }
+
+        header nav li {
+          margin: 0 5px;
+        }
+
+        .breadcrumbs{
+          font-size: 35px;
+        }
+
+        main {
+          display: block;
+        }
+
+        .foto{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* 必要に応じてコンテナの幅や高さを設定することができます */
+          width: 100%;
+          height:100%; /* 例として高さを指定 */
+        }
+
+        .portfolio-item {
+          padding: 10px;
+          margin-bottom: 20px;
+          border-radius: 10px;
+          justify-content: right;
+          align-items: right;
+          background-color: rgb(224, 224, 249);
+        }
+
+        .portfolio-item:hover {
+          background-color: rgb(48, 48, 48);;
+        }
+        
+        a{
+          color: rgb(229, 169, 169);
+        }
+
+        .visual-area {
+          background-color: rgb(22, 22, 22);
+          color: #f1f1f1;
+        }
+
+        footer {
+          background-color: rgb(0, 0, 0);
+          padding: 10px;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          font-size: 12px;
+        }
+        
+        .custom-link{
+          color: #000000;
+          background-color: rgb(151, 151, 197);
+          border-radius: 30px;
+        }
+ 
+        .custom-link:hover {
+          color: rgb(255, 255, 255);
+          background-color: rgb(48, 48, 48);
+        }
+      }

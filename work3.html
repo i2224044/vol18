@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/work1.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/prism.css"> <!-- Prism.jsのスタイルシート -->
+  <title>Work3[My Portfolio]</title>
+</head>
+<body>
+  <div class="container">
+    <div class="visual-area animate__animated animate__fadeIn">
+      <img src="images/IMG1.jpg"style="width: 430px; height: 250px; 
+      alt="フリー素材の画像">
+    </div>
+
+    <header>
+      <div class="logo animate__animated animate__fadeIn">
+        <b>2022−2023 My Portfolio</b>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="work1.html">Work1</a></li>
+          <li><a href="work2.html">Work2</a></li>
+          <li><a  class="pepe" href="#">Work3</a></li>
+          <li><a href="work4.html">Work4</a></li>
+          <li><a href="work5.html">Work5</a></li>
+          <li><a href="work6.html">Work6</a></li>
+        </ul>
+      </nav>
+
+      <div class="breadcrumbs">
+        <a href="home.html">Home </a><a>≫Work3</a>
+      </div>
+      　
+    </header>
+
+    <div class="content-area "xyz="fade">    
+      <main>
+        <h1 class="animate__animated animate__fadeIn">Work3<br>「Googleロゴデザイン」</h1>
+        <img class="foto animate__animated animate__fadeIn" 
+        src="images/google rogo1.png"
+        width=600px; height=400px; text-align=center; alt="作品3">
+        <p>制作授業：メディアプログラミング演習Ⅰ</p>
+        <p>使用環境：Processing</p>
+        <p>制作時期：2022後期</p>
+
+        <p class=honbun>
+          <br>
+          プログラミングソフトのProcessingを使用して<br>
+          制作したGoogleのロゴデザインです。<br>
+          <br>
+         「作品の中にGoogleの文字は必ず入れる。<br>
+          　　必ずマウスのインタラクションを入れる。<br>
+          　サイズ自由。if文、for文は必ず使う。」<br>
+          という条件で制作しています。<br>
+          夜空をモチーフにしていて、星座でGoogleの<br>
+          文字を表しているというデザインです。<br>
+         <div class="code-container">
+           <pre>
+             <code class="language-javascript">
+            //制作コード
+float c; 
+float x,y;
+int velocity = 5;  
+
+void setup() {
+  size(560, 400); 
+  background(50);
+}
+
+
+void draw() {
+  for(int y = 0; y < height; y ++){ //背景グラデーション
+  c = map(y, 0, height, 0, 130);
+  stroke(c); 
+  line(0, y, width, y);  
+  println(c);  
+}
+
+//月
+ fill(#FCF000);
+ noStroke();
+ ellipse(490, 70, 100, 100);
+ 
+ drawX();
+ noLoop();
+
+//G
+ fill(#FEFF00);
+ ellipse(100, 130, 10, 8);
+ ellipse(55, 155, 10, 8);
+ ellipse(40, 200, 10, 8);
+ ellipse(55, 245, 10, 8);
+ ellipse(100, 268, 10, 8);
+ ellipse(145, 245, 10, 8);
+ ellipse(165, 200, 10, 8);
+ ellipse(145, 155, 10, 8);
+ ellipse(100, 200, 10, 8);
+
+//o
+ ellipse(210, 200, 10,8);
+ ellipse(180, 232, 8, 8);
+ ellipse(210, 265, 8, 8);
+ ellipse(240, 232, 8, 8);
+
+//o 
+ ellipse(290, 200, 8, 8);
+ ellipse(260, 232, 8, 8);
+ ellipse(290, 265, 8, 8);
+ ellipse(320, 232, 8, 8);
+
+//g 
+ ellipse(370, 200, 8, 8);
+ ellipse(340, 232, 8, 8);
+ ellipse(370, 265, 8, 8);
+ ellipse(400, 232, 8, 8);
+ ellipse(400, 205, 8, 8);
+ ellipse(400, 282, 8, 8);
+ ellipse(370, 315, 8, 8);
+ ellipse(345, 302, 8, 8);
+
+//I 
+ ellipse(420, 130, 8, 8);
+ ellipse(420, 265, 8, 8);
+ ellipse(450, 265, 8, 8);
+ ellipse(450, 130, 8, 8);
+
+//e 
+ ellipse(490, 200, 8, 8);
+ ellipse(460, 232, 8, 8);
+ ellipse(490, 265, 8, 8);
+ ellipse(520, 232, 8, 8);
+
+//G
+ stroke(255);    
+ strokeWeight(4);
+ line(145,155,100, 130); 
+ line(100, 130, 55, 155); 
+ line(55, 155, 40, 200); 
+ line(40, 200, 55, 245); 
+ line(55, 245,100,268); 
+ line(100,268,145,245); 
+ line(145,245,165,200); 
+ line(165,200,100,200); 
+
+//o 
+ stroke(255);  
+ strokeWeight(3);
+ line(210,200,190, 212); 
+ line(190, 212, 180, 232); 
+ line( 180, 232, 190, 252); 
+ line( 190, 252, 210, 265); 
+ line( 210, 265, 230, 252); 
+ line( 230, 252, 240, 232); 
+ line( 240, 232, 230, 212); 
+ line( 230, 212, 210,200); 
+
+//o 
+ stroke(255);   
+ strokeWeight(3);
+ line(290,200,270, 212); 
+ line(270, 212, 260, 232); 
+ line( 260, 232, 270, 252); 
+ line( 270, 252, 290, 265); 
+ line( 290, 265, 310, 252); 
+ line( 310, 252, 320, 232); 
+ line( 320, 232, 310, 212); 
+ line( 310, 212, 290,200); 
+
+//g 
+ stroke(255);    
+ strokeWeight(3);
+ line(370,200,350, 212); 
+ line(350, 212, 340, 232); 
+ line( 340, 232, 350, 252); 
+ line( 350, 252, 370, 265); 
+ line( 370, 265, 390, 252); 
+ line( 390, 252, 400, 232); 
+ line( 400, 232, 390, 212); 
+ line( 390, 212, 370,200); 
+ line( 400, 205, 400,282);
+ line( 400,282, 390,299);
+ line( 390,299,370,315);
+ line( 370,315,355,310);
+ line( 355,310,345,302);
+
+//I 
+ line( 420,130,432,140);  
+ line( 432,140, 432,255);
+ line( 432,255, 420, 265);
+ line( 420, 265, 450,265);
+ line( 450,265, 437,255);
+ line( 437,255, 437,140);
+ line( 437,140, 450,130);
+ line( 450,130,420,130);
+
+//e
+ stroke(255);     
+ strokeWeight(3);
+ line(490,200,470, 212); 
+ line(470, 212, 460, 232); 
+ line( 460, 232, 470, 252); 
+ line( 470, 252, 490, 265); 
+ line( 490, 265, 515, 257); 
+ line( 520, 232, 510, 212); 
+ line( 510, 212, 490,200);
+ line( 460, 232, 520, 232); 
+}
+
+//星ランダム配置
+void drawX() {                
+ for (int i = 0; i < 10; i++) {
+ x = random(0, width);
+  y = random(0, height);
+  noStroke();
+  if (x >= 200) {
+    fill(#F4F500); 
+  }
+    ellipse(x,y,7,7);
+  }
+}
+
+{//マウス押すと星位置変更
+void mousePressed() {
+    redraw();
+}
+            
+             </code>
+           </pre>
+         </div>
+          <script src="prism.js"></script> <!-- Prism.jsのJavaScriptファイル -->
+          <br>
+          上記のコードをProcessing等で読み込むと、<br>
+          Googleのロゴが表示されます。<br>
+          インタラクティブ要素も少し混み込まれていて、<br>
+          クリックすると星に見立てた斑点がランダムに表示されます。<br>
+          <br>
+          </a>
+        </p>
+      </main>
+    </div>
+
+    <footer>
+     <p>&copy; 2022−2023 My Portfolio.<br>
+     i2224044</p>
+    </footer>
+  </div>
+</body>
+</html>
