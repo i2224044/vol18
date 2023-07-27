@@ -334,7 +334,7 @@
 
 
         .code-container {
-          font-size: 14px; /* 適切なフォントサイズを指定（必要に応じて調整） */
+          font-size: 10px; /* 適切なフォントサイズを指定（必要に応じて調整） */
           height: auto; /* アスペクト比を保ちつつ高さを自動調整 */
           width: auto;
        }
